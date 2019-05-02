@@ -1,15 +1,7 @@
 <?php
 
-$sauleta = rand(0,1);
-$debesuota = rand(0,1);
-$debesuotalietus = rand(0,1);
+$kintamasis = date('s') % 2;
 
-
-if($sauleta < 1) {
-    print 'Sauleta';
-}else {
-    print 'Debesuota su lietum';
-}
 
 
 ?>
@@ -26,35 +18,34 @@ if($sauleta < 1) {
 <head>
     <title>Kintamieji</title>
     <style>
-        .sauleta {
-            background-color: yellow;
-            height: 100px;
-            width: 100px;
+        .kvadratas {
+            background-color: blue;
+            height: 50px;
+            width: 50px;
         }
 
 
-        .debesuota {
+        .rutulys {
             background-color: blue;
-            height: 100px;
-            width: 100px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
         }
 
         .debesuotalietus {
 
-        background-color: green;
-        height: 100px;
-        width: 100px;
+        background-color: blue;
+        height: 50px;
+        width: 50px;
         }
 
     </style>
 
 <body>
-    <?php if($sauleta < 1): ?>
-    <div class="sauleta"></div>
-    <?php elseif($debesuotalietus > 0 && $sauleta > 0): ?>
-        <div class="debesuotalietus"></div>
+    <?php if($kintamasis == 0): ?>
+    <div class="kvadratas"></div>
     <?php else: ?>
-    <div class="debesuota"></div>
+        <div class="rutulys"></div>
     <?php endif?>
 </body>
 </html>
