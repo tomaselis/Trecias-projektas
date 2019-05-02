@@ -1,7 +1,12 @@
 <?php
-
-$kintamasis = date('s') % 2;
-
+$days = 365;
+$cizos_mon_thu = rand(3,4);
+$cizos_fri = rand(10,20);
+$cizos_sat_sun = rand(1,3);
+$pakelio_kaina = 3.50;
+$viso_kaina = '';
+$viso_vnt = '';
+$mon_thu_kaina = '';
 
 
 ?>
@@ -42,10 +47,11 @@ $kintamasis = date('s') % 2;
     </style>
 
 <body>
-    <?php if($kintamasis == 0): ?>
-    <div class="kvadratas"></div>
-    <?php else: ?>
-        <div class="rutulys"></div>
-    <?php endif?>
+<p>
+    Per metus surukysiu [$viso_vnt] cigareciu uz [$viso_kaina] eurais.
+</p>
+<p>
+   Nerukydamas pirmadieni ketvirtadienis sutaupyciau [$$mon_thu_kaina] eur.
+</p>
 </body>
 </html>
